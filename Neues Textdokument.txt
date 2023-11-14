@@ -1,0 +1,82 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Lernen Sie das neue plattformübergreifende PowerShell kennen – https://aka.ms/pscore6
+
+PS C:\Users\miche> cd C:\Users\miche\OneDrive\Desktop\git-tutorial
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git init
+Initialized empty Git repository in C:/Users/miche/OneDrive/Desktop/git-tutorial/.git/
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        config.js
+        index.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git add .
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   config.js
+        new file:   index.js
+
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m
+error: switch `m' requires a value
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'miche@LAPTOP-SBSUTUES.(none)')
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git config --global user.email "michel.khoury.99@hotmail.com"
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git cinfig --global user.name "Michael Alkhouri"
+git: 'cinfig' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git config --global user.email "michel.khoury.99@hotmail.com"
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git config --global user.name "Michael Alkhouri"
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 1"
+[master (root-commit) 846536a] Version 1
+ 2 files changed, 4 insertions(+)
+ create mode 100644 config.js
+ create mode 100644 index.js
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git config --global user.name "Michael Alkhouri"
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git config --global  "michel.khoury.99@hotmail.com"
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log
+commit 846536a60b7a0f568872fb021c0700fa40330a25 (HEAD -> master)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git add .
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 1" --amend
+[master b554995] Version 1
+ Date: Tue Nov 14 21:24:09 2023 +0100
+ 3 files changed, 5 insertions(+)
+ create mode 100644 change.js
+ create mode 100644 config.js
+ create mode 100644 index.js
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log
+commit b5549959fcbd697634f672dfff7ce9544f981c31 (HEAD -> master)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial>
