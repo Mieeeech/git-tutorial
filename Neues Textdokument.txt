@@ -79,4 +79,294 @@ Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
 Date:   Tue Nov 14 21:24:09 2023 +0100
 
     Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git add .
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 2"
+[master b1ff7f1] Version 2
+ 4 files changed, 85 insertions(+), 2 deletions(-)
+ create mode 100644 Neues Textdokument.txt
+ create mode 100644 test.js
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 3"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   change.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 3"
+[master 12cc15b] Version 3
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log
+commit 12cc15b98431ae27b8f0e25cd146b821465fa270 (HEAD -> master)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:41:25 2023 +0100
+
+    Version 3
+
+commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:39:30 2023 +0100
+
+    Version 2
+
+commit b5549959fcbd697634f672dfff7ce9544f981c31
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git checkout b1ff7f17dfab83406aec5a8dcc079f973526837e
+Note: switching to 'b1ff7f17dfab83406aec5a8dcc079f973526837e'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at b1ff7f1 Version 2
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log
+commit b1ff7f17dfab83406aec5a8dcc079f973526837e (HEAD)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:39:30 2023 +0100
+
+    Version 2
+
+commit b5549959fcbd697634f672dfff7ce9544f981c31
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all
+commit 12cc15b98431ae27b8f0e25cd146b821465fa270 (master)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:41:25 2023 +0100
+
+    Version 3
+
+commit b1ff7f17dfab83406aec5a8dcc079f973526837e (HEAD)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:39:30 2023 +0100
+
+    Version 2
+
+commit b5549959fcbd697634f672dfff7ce9544f981c31
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git checkout b5549959fcbd697634f672dfff7ce9544f981c31
+Previous HEAD position was b1ff7f1 Version 2
+HEAD is now at b554995 Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all
+commit 12cc15b98431ae27b8f0e25cd146b821465fa270 (master)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:41:25 2023 +0100
+
+    Version 3
+
+commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:39:30 2023 +0100
+
+    Version 2
+
+commit b5549959fcbd697634f672dfff7ce9544f981c31 (HEAD)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git add .
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 1 updated"
+[detached HEAD b457ded] Version 1 updated
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all
+commit b457dedc7ea6d9c4250131ced3cb725a524e383d (HEAD)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:48:00 2023 +0100
+
+    Version 1 updated
+
+commit 12cc15b98431ae27b8f0e25cd146b821465fa270 (master)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:41:25 2023 +0100
+
+    Version 3
+
+commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:39:30 2023 +0100
+
+    Version 2
+
+commit b5549959fcbd697634f672dfff7ce9544f981c31
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all  --praph
+fatal: unrecognized argument: --praph
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all --graph
+* commit b457dedc7ea6d9c4250131ced3cb725a524e383d (HEAD)
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:48:00 2023 +0100
+|
+|     Version 1 updated
+|
+| * commit 12cc15b98431ae27b8f0e25cd146b821465fa270 (master)
+| | Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| | Date:   Tue Nov 14 21:41:25 2023 +0100
+| |
+| |     Version 3
+| |
+| * commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+|/  Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+|   Date:   Tue Nov 14 21:39:30 2023 +0100
+|
+|       Version 2
+|
+* commit b5549959fcbd697634f672dfff7ce9544f981c31
+  Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+  Date:   Tue Nov 14 21:24:09 2023 +0100
+
+      Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  b457ded Version 1 updated
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> b457ded
+
+Switched to branch 'master'
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all --graph
+* commit 12cc15b98431ae27b8f0e25cd146b821465fa270 (HEAD -> master)
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:41:25 2023 +0100
+|
+|     Version 3
+|
+* commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:39:30 2023 +0100
+|
+|     Version 2
+|
+* commit b5549959fcbd697634f672dfff7ce9544f981c31
+  Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+  Date:   Tue Nov 14 21:24:09 2023 +0100
+
+      Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git checkout b5549959fcbd697634f672dfff7ce9544f981c31 .
+Updated 3 paths from c1bb2e7
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all --graph
+* commit 12cc15b98431ae27b8f0e25cd146b821465fa270 (HEAD -> master)
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:41:25 2023 +0100
+|
+|     Version 3
+|
+* commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:39:30 2023 +0100
+|
+|     Version 2
+|
+* commit b5549959fcbd697634f672dfff7ce9544f981c31
+  Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+  Date:   Tue Nov 14 21:24:09 2023 +0100
+
+      Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   change.js
+        modified:   config.js
+        modified:   index.js
+
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Version 1 restored"
+[master cee2c7a] Version 1 restored
+ 3 files changed, 3 insertions(+), 4 deletions(-)
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all
+commit cee2c7ac665cdd1a53af75bd2d2dfe9595d81d3c (HEAD -> master)
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:55:03 2023 +0100
+
+    Version 1 restored
+
+commit 12cc15b98431ae27b8f0e25cd146b821465fa270
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:41:25 2023 +0100
+
+    Version 3
+
+commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:39:30 2023 +0100
+
+    Version 2
+
+commit b5549959fcbd697634f672dfff7ce9544f981c31
+Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+Date:   Tue Nov 14 21:24:09 2023 +0100
+
+    Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git log --all --graph
+* commit cee2c7ac665cdd1a53af75bd2d2dfe9595d81d3c (HEAD -> master)
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:55:03 2023 +0100
+|
+|     Version 1 restored
+|
+* commit 12cc15b98431ae27b8f0e25cd146b821465fa270
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:41:25 2023 +0100
+|
+|     Version 3
+|
+* commit b1ff7f17dfab83406aec5a8dcc079f973526837e
+| Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+| Date:   Tue Nov 14 21:39:30 2023 +0100
+|
+|     Version 2
+|
+* commit b5549959fcbd697634f672dfff7ce9544f981c31
+  Author: Michael Alkhouri <michel.khoury.99@hotmail.com>
+  Date:   Tue Nov 14 21:24:09 2023 +0100
+
+      Version 1
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git config --global alias.s "status"
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git s
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git config --global alias.m "commit -m"
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git m
+error: switch `m' requires a value
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git add .
+PS C:\Users\miche\OneDrive\Desktop\git-tutorial> git commit -m "Add git ignore"
+[master fbdea06] Add git ignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
 PS C:\Users\miche\OneDrive\Desktop\git-tutorial>
